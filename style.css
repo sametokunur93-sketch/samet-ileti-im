@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ARKA PLAN */
+body {
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ÜST BAR */
+.top-bar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+    background: #25D366;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* BLUR */
+.blur {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    filter: blur(150px);
+    opacity: 0.4;
+}
+
+.blur.one { background: #ff9800; top: 10%; left: 5%; }
+.blur.two { background: #00bcd4; bottom: 10%; right: 10%; }
+
+/* DEKOR */
+.deco {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.08;
+    animation: float 6s ease-in-out infinite;
+}
+
+.d1 { top: 20%; left: 45%; }
+.d2 { bottom: 20%; left: 10%; animation-delay: 2s; }
+.d3 { top: 15%; right: 10%; animation-delay: 4s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* ARKA YAZI */
+.bg-text {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-size: 90px;
+    font-weight: 800;
+    opacity: 0.04;
+    letter-spacing: 8px;
+}
+
+/* CAM PANEL */
+.glass-panel {
+    position: absolute;
+    inset: 40px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 30px;
+    animation: panelIn 0.8s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* ANA */
+.page {
+    height: 100%;
+    display: flex;
+    padding: 50px;
+}
+
+/* SOL */
+.left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    animation: leftIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* HERO */
+.hero-card {
+    background: rgba(255,255,255,0.18);
+    padding: 40px;
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.hero-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+/* ÖZELLİKLER */
+.feature-box {
+    display: flex;
+    gap: 20px;
+}
+
+.feature {
+    flex: 1;
+    background: rgba(255,255,255,0.12);
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.2);
+}
+
+.feature i {
+    font-size: 26px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+/* SOSYAL */
+.social-box {
+    display: flex;
+    gap: 18px;
+}
+
+.social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.social:hover {
+    transform: translateY(-8px) scale(1.15);
+}
+
+/* ORTA */
+.divider {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* 🔥 SAĞ ALAN – TELEFONLAR YAN YANA */
+.right {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap; /* ALT ALTA DÜŞMEYİ ENGELLER */
+}
+
+/* KART */
+.card {
+    position: relative;
+    background: rgba(255,255,255,0.18);
+    padding: 25px;
+    width: 210px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.card img {
+    width: 140px;
+    margin-bottom: 15px;
+}
+
+/* DETAY BUTONU */
+.details summary {
+    transition: all 0.3s ease;
+}
+
+.details summary:hover {
+    background: rgba(255,255,255,0.35);
+    transform: translateX(4px);
+}
+
+/* FOOTER */
+.footer-mini {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* ANİMASYONLAR */
+@keyframes panelIn { to { opacity: 1; transform: scale(1); } }
+@keyframes leftIn { from { transform: translateX(-40px); opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
